@@ -1,5 +1,5 @@
-<template>		
-	<div class="p-5">		
+<template>
+	<div class="p-5">			
 		<h1 class="mb-4" v-html="title"></h1>
 		
 		<img class="ng-featured-img mb-4" :src="featuredImage" width="1320" height="400" />
@@ -18,8 +18,7 @@ export default {
     }
   },
 	async created () {
-
-		const contentFetch = await fetch("https://ui96v7g6.directus.app/items/pages/3")
+		const contentFetch = await fetch("https://ui96v7g6.directus.app/items/pages/4")
 
     	const { data: contentData } = await contentFetch.json()
 
@@ -38,18 +37,3 @@ export default {
 	},
 }
 </script>
-<style>
-body {
-	background: #eee;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-.alert p,
-.copy p {
-	margin-bottom: 0;
-}
-</style>
